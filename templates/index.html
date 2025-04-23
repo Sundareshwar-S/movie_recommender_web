@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommender</h1>
+        <p>Select your favorite genres and get movie recommendations!</p>
+
+        <!-- Genre Selection Form -->
+        <form action="/recommend" method="POST">
+            <div class="genres">
+                {% for genre in genres %}
+                <label class="genre-option">
+                    <input type="checkbox" name="genres" value="{{ genre }}" 
+                        {% if genre in selected_genres %} checked {% endif %}>
+                    {{ genre }}
+                </label>
+                {% endfor %}
+            </div>
+            <button type="submit" class="submit-btn">Get Recommendations</button>
+        </form>
+
+        <!-- Recommendations Section -->
+        {% if recommendations %}
+        <div class="recommendations">
+            <h2>Recommended Movies</h2>
+            <ul>
+                {% for movie in recommendations %}
+                <li>
+                    <strong>{{ movie.title }}</strong> - Average Rating: {{ movie.avg_rating|round(2) }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% elif error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
