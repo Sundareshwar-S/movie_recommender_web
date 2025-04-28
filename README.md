@@ -2,8 +2,8 @@
 
 ## Live Deployed Link
 
-You can access the live movie recommendation system here: 
-[Live Deployed Link](https://movierecommenderweb-production.up.railway.app)
+You can access the live movie recommendation system at: https://movierecommenderweb-production.up.railway.app
+
 
 ---
 
