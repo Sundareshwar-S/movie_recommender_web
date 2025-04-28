@@ -1,7 +1,8 @@
 # 🎬 Movie Recommender System (Genre-Based)
 
-Live Deployed Link: 
-[https://movie-recommender-web-6j9i.onrender.com](movierecommenderweb-production.up.railway.app)
+## Live Deployed Link
+
+You can access the live movie recommendation system here: [Live Deployed Link](https://movierecommenderweb-production.up.railway.app)
 
 ---
 
