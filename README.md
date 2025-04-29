@@ -47,19 +47,26 @@ The recommendations are generated using preloaded datasets of movies and user ra
 
 ## 📁 Project Structure
 
-```text
-todo-list-app/
+```
+MOVIE_RECOMMENDER_WEB/
 │
-├── app.py            # Main Flask application
-├── requirements.txt  # Python dependencies
-├── start.sh          # Glitch startup script
-├── .glitch.json      # Glitch configuration
+├── __pycache__/                  # Python bytecode cache
+├── static/                       # CSS files
+│   └── style.css                 # Modern styled UI
 │
-├── templates/
-│   └── index.html    # HTML template (Jinja2)
+├── templates/                    # HTML templates
+│   └── index.html                # Main webpage
 │
-└── static/
-    └── style.css     # CSS styling
+├── app.py                        # Flask application entry point
+├── extraction.py                 # Script to extract/convert u.item (optional)
+├── genre_based_logic.py          # Core logic for genre-based recommendations
+│
+├── item.csv                      # Raw movie data with genre flags
+├── movies.csv                    # Cleaned movie metadata (used in app)
+├── ratings.csv                   # User ratings for movies
+├── requirements.txt              # Python dependencies for deployment
+```
+
 ---
 
 ## ✨ Features
